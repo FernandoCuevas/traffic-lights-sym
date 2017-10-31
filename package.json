@@ -1,0 +1,24 @@
+{
+  "name": "traffic-lights-sym",
+  "version": "1.0.0",
+  "description": " application that simulates a set of traffic lights at",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernandoCuevas/traffic-lights-sym.git"
+  },
+  "author": "Fernando Cuevas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FernandoCuevas/traffic-lights-sym/issues"
+  },
+  "homepage": "https://github.com/FernandoCuevas/traffic-lights-sym#readme",
+  "devDependencies": {
+    "jasmine": "^2.8.0",
+    "jasmine-spec-reporter": "^4.2.1"
+  }
+}
