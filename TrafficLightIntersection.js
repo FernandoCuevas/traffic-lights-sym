@@ -8,7 +8,7 @@ const TrafficLight = require('./TrafficLight');
  */
 function TrafficLightIntersection(log) {
   let self = this;
-  /** Queue of TrafficLight sets. A TrafficLight set is a collection of TrafficLight objects whose light's need to be changed at the same time.  */
+  /** Queue of TrafficLight sets. A TrafficLight set is a collection of TrafficLight objects whose lights need to be changed at the same time.  */
   let trafficLightSets = [];
   trafficLightSets.push([new TrafficLight('N'), new TrafficLight('S')]);
   trafficLightSets.push([new TrafficLight('E'), new TrafficLight('W')]);
