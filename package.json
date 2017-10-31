@@ -4,6 +4,7 @@
   "description": " application that simulates a set of traffic lights at",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "jasmine"
   },
   "repository": {
