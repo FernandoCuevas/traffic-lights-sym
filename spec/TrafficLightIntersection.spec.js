@@ -2,19 +2,24 @@
 const TrafficLightIntersection = require('../TrafficLightIntersection');
 const TrafficLight = require('../TrafficLight');
 
+/** In-memory logger */
 function Logger() {
   let logs = [];
   this.clear = () => logs = [];
   this.log = (label, prev, next) => logs.push({ label, prev, next });
+  this.size = () => logs.length;
 }
 
+/** Unit tests for the TrafficLightIntersection class */
 describe('TrafficLightIntersection', function () {
 
+  /** Setup a logger and the Jasmine clock */
   beforeEach(function () {
     this.logger = new Logger();
     jasmine.clock().install();
   });
 
+  /** Remove the Jasmine clock */
   afterEach(function () {
     jasmine.clock().uninstall();
   });
@@ -85,7 +90,6 @@ describe('TrafficLightIntersection', function () {
     done();
   });
 
-
   it('should call simulate twice', function (done) {
     let trafficLightIntersection = new TrafficLightIntersection(this.logger.log);
     let spy = spyOn(trafficLightIntersection, 'simulate').and.callThrough();
@@ -101,6 +105,13 @@ describe('TrafficLightIntersection', function () {
     trafficLightIntersection.simulate(1, 1, 2);
     jasmine.clock().tick(6);
     expect(spy).toHaveBeenCalledTimes(3);
+    done();
+  });
+
+  it('should generate 4 log entries', function (done) {
+    let trafficLightIntersection = new TrafficLightIntersection(this.logger.log);
+    trafficLightIntersection.simulate(1, 1, 1);
+    expect(this.logger.size()).toBe(4);
     done();
   });
 

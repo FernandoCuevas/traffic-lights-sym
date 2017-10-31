@@ -1,7 +1,8 @@
 'use strict';
 const TrafficLight = require('../TrafficLight');
+/** Unit tests for the TrafficLight class */
 describe('TrafficLight',function(){
-  it('should set label',function(done){
+  it('should set and get label',function(done){
     let trafficLight = new TrafficLight('N');
     expect(trafficLight.getLabel()).toBe('N');
     done();
