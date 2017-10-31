@@ -1,4 +1,4 @@
-#traffic-lights-sym
+# traffic-lights-sym
 Application that simulates a set of traffic lights in an intersection
 
 ### Requirements ###
